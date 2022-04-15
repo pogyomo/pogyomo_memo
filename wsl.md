@@ -8,3 +8,13 @@
 [boot]
 command = "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
 ```
+
+## nvim-cmp関係
+### :!で固まる
+* :!{cmd}で数十秒固まる
+* [解決方法](https://github.com/hrsh7th/cmp-cmdline/issues/24)がissueにあった
+* /etc/wsl.confに下記の設定を加える
+```conf
+[interop]
+appendWindowsPath = false
+```
